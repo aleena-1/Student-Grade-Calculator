@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: student-grade-calculator
+    runtime: static
+    buildCommand: "true"
+    staticPublishPath: .
+    autoDeployTrigger: commit
