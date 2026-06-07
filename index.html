@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Grade Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="calculator" aria-labelledby="page-title">
+      <div class="calculator__header">
+        <div>
+          <p class="eyebrow">Grade Tool</p>
+          <h1 id="page-title">Student Grade Calculator</h1>
+        </div>
+        <button class="icon-button" id="addSubject" type="button" aria-label="Add subject" title="Add subject">+</button>
+      </div>
+
+      <form id="gradeForm" class="marks-form">
+        <div class="form-grid" id="subjectsList" aria-label="Subject marks"></div>
+
+        <div class="actions">
+          <button class="button button--primary" type="submit">Calculate</button>
+          <button class="button button--secondary" id="resetForm" type="button">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <aside class="results" aria-live="polite">
+      <p class="eyebrow">Result</p>
+      <div class="grade-badge" id="gradeBadge">--</div>
+      <dl class="stats">
+        <div>
+          <dt>Total Marks</dt>
+          <dd id="totalMarks">0</dd>
+        </div>
+        <div>
+          <dt>Average</dt>
+          <dd id="averageMarks">0%</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd id="statusText">Enter marks</dd>
+        </div>
+      </dl>
+      <p class="feedback" id="feedbackText">Add marks from 0 to 100, then calculate the average and grade.</p>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
